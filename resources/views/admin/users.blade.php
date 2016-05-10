@@ -33,18 +33,25 @@
                   </thead>
                   <tbody>
                   @foreach($users as $user)
-                 
-                    <tr >
+
+
+                  
+                  
+                    <tr>
                     <td>Photo</td>
                     <td>{!!$user->name!!}</td>
                     <td>{!!$user->email!!}</td>
-                    <td>{!!$user->birthdate!!}</td>
+                    
+
+
+                  </td>
                     <td>city</td>
                     <td class="center"><button class="btn btn-success">Active </button>
                     <button class="btn btn-warning">Inactive </button>
                     <a href="{!!route('admin.users.show',['id'=>$user->id])!!}" class="btn btn-warning">View</a>
                     <button class="btn btn-danger">Suspend </button></td>
                     </tr>
+                    
                    @endforeach
                   </tbody>
                 </table>

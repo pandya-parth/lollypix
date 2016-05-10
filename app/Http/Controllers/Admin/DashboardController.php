@@ -18,7 +18,7 @@ class DashboardController extends Controller
 
     public function index()
     {
-    	return view('admin/home');
+    	return view('admin/index');
     }
 
      public function changePassword()

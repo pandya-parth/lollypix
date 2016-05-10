@@ -15,14 +15,16 @@
           <li class="m-t-30 ">
             <a href="{!!route('dashboard')!!}" class="detailed">
               <span class="title">Dashboard</span>
+              <span class="details">12 New Updates</span>
              </a>
             <span class="icon-thumbnail bg-success"><i class="pg-home"></i></span>
           </li>
            <li class="m-t-30 ">
             <a href="{!!route('admin.users.index')!!}" class="detailed">
               <span class="title">User({!!DB::table('users')->count()!!})</span>
+              <span class="details">12 New Updates</span>
             </a>
-            <span class="icon-thumbnail bg-success"><i class="fa fa-user"></i></span>
+            <span class="bg-success icon-thumbnail "><i class="fa fa-user"></i></span>
           </li>
         </ul>
         <div class="clearfix"></div>

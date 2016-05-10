@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\UserProfile;
 
 class UserController extends Controller
 {
@@ -17,8 +18,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users=User::all();
-      return view('admin/users',compact('users'));
+        $users=User::where("role","<>","admin")->get();
+        return view('admin/users',compact('users'));
     }
 
     /**
