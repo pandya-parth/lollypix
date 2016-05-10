@@ -26,9 +26,14 @@ Route::group(['middleware' => ['auth', 'auth.admin'],'prefix'=>'admin','namespac
 	/* Route for Change Password for admin */
 	Route::post('changePassword',['as'=>'changePassword','uses'=> 'DashboardController@updatePassword']);
     Route::get('changePassword', ['as'=>'changePassword','uses'=> 'DashboardController@changePassword']);
+    
+    /* Route for  web site  setting */
+   	Route::controller('settings', 'SettingsController');
 
     /* Route for Admin User Management */
     Route::resource('users','UserController');
+    /* Route for Admin Tags Management */
+    Route::resource('tags','TagsController');
 });
 /* Admin routes ends here. */
 	

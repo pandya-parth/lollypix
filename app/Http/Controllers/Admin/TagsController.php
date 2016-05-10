@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\User; // call model  User
-use App\UserProfile; //call model  UserProfile
+use App\Tag;
 
-class UserController extends Controller
+class TagsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users=User::where("role","<>","admin")->get(); // fetch users records only (not admin)
-        return view('admin/users/index',compact('users'));// to view users page
+       $tags=Tag::all();
+       return view('admin/tags/index',compact('tags'));
     }
 
     /**
@@ -51,8 +50,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user_detail=User::findOrFail($id);// fetch record for selected id only
-        return view('admin/users/user_detail',compact('user_detail')); // to view user_detail page this page will contain single user informtion
+        //
     }
 
     /**

@@ -29,7 +29,13 @@
             <a href="{!!route('admin.users.index')!!}" class="detailed">
               <span class="title">Gift()</span>
             </a>
-            <span class="bg-success icon-thumbnail "><i class="fa fa-user"></i></span>
+            <span class="bg-success icon-thumbnail "><i class="fa fa-gift"></i></span>
+          </li>
+            <li >
+            <a href="{!!url('admin/settings')!!}" class="detailed">
+              <span class="title">Setting</span>
+            </a>
+            <span class="bg-success icon-thumbnail "><i class="fa fa-cogs"></i></span>
           </li>
         </ul>
         <div class="clearfix"></div>
