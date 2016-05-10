@@ -12,12 +12,12 @@ class CreateUserProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_profiles', function (Blueprint $table) {
+        Schema::create('user_profile', function (Blueprint $table) {
            $table->increments('id')->nullable();
             $table->integer('user_id')->unsigned();
             $table->string('name')->nullable();
             $table->date('birth_date')->nullable();
-            $table->string('gender')->nullable();
+            $table->enum('gender','male','female','other')->default('male');
             $table->string('country')->nullable();
             $table->string('city')->nullable();
             $table->string('zip_code')->nullable();
@@ -25,8 +25,8 @@ class CreateUserProfileTable extends Migration
             $table->string('ip_address')->nullable();
             $table->string('profile_pic')->nullable();
             $table->string('id_proof')->nullable();
-            $table->string('subscribe')->nullable();
-            $table->string('hight')->nullable();
+            $table->boolean('subscribe');
+            $table->string('height')->nullable();
             $table->string('chest_bust')->nullable();
             $table->string('waist')->nullable();
             $table->string('physique')->nullable();
