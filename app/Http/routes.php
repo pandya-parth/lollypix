@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::group(['middleware' => ['auth', 'auth.admin'],'prefix'=>'admin','namespace'=>'Admin'], function(){
-	Route::get('dashboard', ['as'=>'dashboard','uses'=>'DashboardController@index']);
+	Route::get('/', ['as'=>'dashboard','uses'=>'DashboardController@index']);
 	Route::post('changePassword',['as'=>'changePassword','uses'=> 'DashboardController@updatePassword']);
     Route::get('changePassword', ['as'=>'changePassword','uses'=> 'DashboardController@changePassword']);
     Route::resource('users','UserController');
