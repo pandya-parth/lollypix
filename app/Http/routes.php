@@ -17,10 +17,18 @@ Route::get('/', function () {
 
 Route::auth();
 
+/* All Admin routes start from here: */
 Route::group(['middleware' => ['auth', 'auth.admin'],'prefix'=>'admin','namespace'=>'Admin'], function(){
+
+	/* Route for Admin Dashboard */
 	Route::get('/', ['as'=>'dashboard','uses'=>'DashboardController@index']);
+
+	/* Route for Change Password for admin */
 	Route::post('changePassword',['as'=>'changePassword','uses'=> 'DashboardController@updatePassword']);
     Route::get('changePassword', ['as'=>'changePassword','uses'=> 'DashboardController@changePassword']);
+
+    /* Route for Admin User Management */
     Route::resource('users','UserController');
-});//This is used for Admin section
+});
+/* Admin routes ends here. */
 	
