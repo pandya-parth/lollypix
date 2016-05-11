@@ -21,22 +21,30 @@
           </li>
            <li >
             <a href="{!!route('admin.users.index')!!}" class="detailed">
-              <span class="title">User({!!DB::table('users')->count()!!})</span>
+              <span class="title">Users({!!DB::table('users')->count()!!})</span>
             </a>
             <span class="bg-success icon-thumbnail "><i class="fa fa-user"></i></span>  
           </li>
            <li >
             <a href="{!!route('admin.users.index')!!}" class="detailed">
-              <span class="title">Gift()</span>
+              <span class="title">Gifts()</span>
             </a>
             <span class="bg-success icon-thumbnail "><i class="fa fa-gift"></i></span>
           </li>
             <li >
             <a href="{!!url('admin/settings')!!}" class="detailed">
-              <span class="title">Setting</span>
+              <span class="title">Settings</span>
             </a>
             <span class="bg-success icon-thumbnail "><i class="fa fa-cogs"></i></span>
           </li>
+
+            <li >
+            <a href="{!!url('admin/tags')!!}" class="detailed">
+              <span class="title">Tags</span>
+            </a>
+            <span class="bg-success icon-thumbnail "><i class="fa fa-tags"></i></span>
+          </li>
+          
         </ul>
         <div class="clearfix"></div>
       </div>

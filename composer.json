@@ -7,7 +7,9 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "anahkiasen/former": "^4.0"
+        "anahkiasen/former": "^4.0",
+        "cviebrock/eloquent-sluggable": "^3.1",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -22,7 +24,12 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+         "files": [
+           "app/helpers.php"
+        ]
+        
+
     },
     "autoload-dev": {
         "classmap": [

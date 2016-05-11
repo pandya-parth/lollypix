@@ -26,7 +26,7 @@ class SettingsController extends Controller
 
       		Config::set($id, $value);
     	}
-   		return view('admin/settings');
+   		return view('admin/settings/index');
   	}
 
   	public function postIndex() {

@@ -149,6 +149,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         //New installed Packeges class
         Former\FormerServiceProvider::class,
+        //this is used for Image resizing
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -205,6 +207,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         //New installed Packeges class
         'Former' => 'Former\Facades\Former', // Formar Package installed to populate data to the form
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
