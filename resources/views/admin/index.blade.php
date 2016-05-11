@@ -20,6 +20,4 @@
           </div>
           <!-- END JUMBOTRON -->
         </div>
-
-
 @endsection
