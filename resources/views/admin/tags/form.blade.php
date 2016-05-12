@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 @section('title','Tag')
 @section('content')
 <div class='content'>
@@ -44,7 +44,7 @@
 	                    	<div id="preview"></div>
 	                    	@if(isset($tag))
 	                    	<div class="form-group">
-	                   	   		<img src={!!$tag->photo_url("thumb")!!}>
+	                   	   		<img src={!!$tag->photo_url("thumb")!!} >
 	                    	</div>
 	                    	@endif
 	                      {!! Former::hidden('photo')->id('photo') !!}

@@ -29,7 +29,7 @@ class Tag extends Model implements SluggableInterface
 			upload_move($file,'tag');
 			Image::make($source_path)->resize(320, 240)->save($source_path);
 			upload_move($file,'tag','medium');
-			Image::make($source_path)->resize(175, 130)->save($source_path);
+			Image::make($source_path)->resize(50, 50)->save($source_path);
 			upload_move($file,'tag','thumb');
 
 			@unlink($source_path);

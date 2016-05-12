@@ -1,7 +1,5 @@
 
-@extends('layouts.login')
-@section('title','Change Password')
-@extends('layouts.login')
+@extends('admin.layouts.login')
 @section('title','Change Password')
 @section('content')
 

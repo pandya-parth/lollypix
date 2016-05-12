@@ -16,7 +16,6 @@ elixir (mix)->
       'pages-icons.css'
       'pages.css'
       'windows.chrome.fix.css'
-
       'style.css'
     ], 'public/backend/css/vendor.css'
 
@@ -48,7 +47,6 @@ elixir (mix)->
     ], 'public/backend/js/vendor.js'
 
     mix.version [
-
       'backend/css/vendor.css'
       'backend/js/vendor.js'
     ]
