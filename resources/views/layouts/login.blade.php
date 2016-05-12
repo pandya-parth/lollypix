@@ -15,8 +15,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta content="" name="description" />
     <meta content="" name="author" />
-    <link rel="stylesheet" href="{{ elixir('css/admin/vendor.css') }}">
-    <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
+    <link rel="stylesheet" href="{{ elixir('backend/css/vendor.css') }}">
     <!--[if lte IE 9]>
         <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -32,15 +31,11 @@
   <body class="fixed-header   ">
     <!-- START PAGE-CONTAINER -->
     @yield('content')
-  
     <!-- END PAGE CONTAINER -->
     <!-- BEGIN VENDOR JS -->
-    <script src="{{ elixir('js/admin/vendor.js') }}"></script>
-    <script src="{{ elixir('js/app.js') }}"></script>
+    <script src="{{ elixir('backend/js/vendor.js') }}"></script>
     <!-- END VENDOR JS -->
     <!-- BEGIN CORE TEMPLATE JS -->
-    
-    
     <script>
     $(function()
     {

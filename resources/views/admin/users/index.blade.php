@@ -2,11 +2,15 @@
 @section('title','User Details')
 @section('content')
 <div class="content">
-		 <div class="container-fluid container-fixed-lg bg-white">
+	<div class="container-fluid container-fixed-lg bg-white">
 
+<<<<<<< HEAD
+		<ul class="breadcrumb">
+=======
 			<ul class="breadcrumb">
+>>>>>>> 28a8e15f1575e34658845e2e80b77bf522913320
 			<li>
-			<a href="{!! url("admin/dashboard")!!}">Dashboard</a>
+				<a href="{!! url("admin/dashboard")!!}">Dashboard</a>
 			</li>
 			<li><a href="#" class="active">Users</a>
 			</li>
@@ -32,6 +36,29 @@
 						</tr>
 					</thead>
 					<tbody>
+<<<<<<< HEAD
+						@foreach($users as $user)
+						<tr>
+							<td><img src="{!!$user->profile->profile_pic!!}" alt="{!!$user->profile->profile_pic!!}"></td>
+							<td>{!!$user->name!!}</td>
+							<td>{!!$user->email!!}</td>
+							<td>{!!$user->profile->birth_date!!}</td>
+							<td>{!!$user->profile->city!!}</td>
+							<td class="center"><button class="btn btn-success">Active </button>
+								<button class="btn btn-warning">Inactive </button>
+								<a href="{!!route('admin.users.show',['id'=>$user->id])!!}" class="btn btn-warning">View</a>
+								<button class="btn btn-danger">Suspend </button></td>
+							</tr>
+							@endforeach
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- END PANEL -->
+		</div>
+	</div>
+	@endsection
+=======
 					@foreach($users as $user)
 					 <tr>
 						<td><img src="{!!$user->profile->profile_pic!!}" alt="{!!$user->profile->profile_pic!!}"></td>
@@ -53,3 +80,4 @@
 	</div>
 </div>
 @endsection
+>>>>>>> 28a8e15f1575e34658845e2e80b77bf522913320
