@@ -60,7 +60,7 @@
 
                 
                 <li class="bg-master-lighter">
-                  <a href="{!! url('/logout') !!}" class="clearfix">
+                  <a href="{!! route('logout') !!}" class="clearfix">
                     <span class="pull-left">Logout</span>
                     <span class="pull-right"><i class="pg-power"></i></span>
                   </a>

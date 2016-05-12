@@ -18,9 +18,9 @@ elixir (mix)->
       'pages-icons.css'
       'pages.css'
       'windows.chrome.fix.css'
-      'angular-datepicker.css'
       'style.css'
     ], 'public/backend/css/vendor.css'
+
 
 
     mix.scripts [
@@ -46,23 +46,10 @@ elixir (mix)->
       'pages.min.js'
       'datatables.js'
       'plupload.full.min.js'
-      bowerPath('angular', 'angular.js')
-      bowerPath('angular-bootstrap', 'ui-bootstrap-tpls.js')
-      bowerPath('angular-filter','dist','angular-filter.js')
-      bowerPath('underscore', 'underscore.js')
-      bowerPath('angular-utils-pagination', 'dirPagination.js')
-      bowerPath('angular-prompt', 'dist', 'angular-prompt.js')
-      bowerPath('angular-country-select','dist','angular-country-select.js')
-      'angular-datepicker.js'
       'scripts.js'
     ], 'public/backend/js/vendor.js'
 
-    mix.coffee [
-      '*.coffee'
-      'config/*.coffee'
-      'controllers/*.coffee'
-      'services/*.coffee'
-    ]
+    
 
     mix.version [
       'backend/css/vendor.css'

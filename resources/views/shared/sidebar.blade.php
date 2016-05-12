@@ -12,31 +12,38 @@
       <div class="sidebar-menu">
         <!-- BEGIN SIDEBAR MENU ITEMS-->
         <ul class="menu-items">
-          <li class="m-t-30 ">
+          <li class="m-t-30">
             <a href="{!!route('dashboard')!!}" class="detailed">
               <span class="title">Dashboard</span>
               <span class="details">12 New Updates</span>
              </a>
             <span class="icon-thumbnail bg-success"><i class="pg-home"></i></span>
           </li>
-           <li >
+           <li class=''>
             <a href="{!!route('admin.users.index')!!}" class="detailed">
-              <span class="title">User({!!DB::table('users')->count()!!})</span>
+              <span class="title">Users({!!DB::table('users')->count()!!})</span>
             </a>
             <span class="bg-success icon-thumbnail "><i class="fa fa-user"></i></span>  
           </li>
-           <li >
+           <li class="">
             <a href="{!!route('admin.users.index')!!}" class="detailed">
-              <span class="title">Gift()</span>
+              <span class="title">Gifts(0)</span>
             </a>
             <span class="bg-success icon-thumbnail "><i class="fa fa-gift"></i></span>
           </li>
-            <li >
+            <li class="">
             <a href="{!!url('admin/settings')!!}" class="detailed">
-              <span class="title">Setting</span>
+              <span class="title">Settings</span>
             </a>
-            <span class="bg-success icon-thumbnail "><i class="fa fa-cogs"></i></span>
+            <span class="bg-success icon-thumbnail title"><i class="fa fa-cogs"></i></span>
           </li>
+            <li class="">
+            <a href="{!!url('admin/tags')!!}" class="detailed">
+              <span class="title">Tags</span>
+            </a>
+            <span class="bg-success icon-thumbnail "><i class="fa fa-tags"></i></span>
+          </li>
+          
         </ul>
         <div class="clearfix"></div>
       </div>
