@@ -20,11 +20,8 @@ elixir (mix)->
       'windows.chrome.fix.css'
       'angular-datepicker.css'
       'style.css'
-    ], 'public/css/vendor.css'
+    ], 'public/backend/css/vendor.css'
 
-
-
-    mix.sass 'app.scss'
 
     mix.scripts [
       'pace.min.js'
@@ -58,7 +55,7 @@ elixir (mix)->
       bowerPath('angular-country-select','dist','angular-country-select.js')
       'angular-datepicker.js'
       'scripts.js'
-    ], 'public/js/vendor.js'
+    ], 'public/backend/js/vendor.js'
 
     mix.coffee [
       '*.coffee'
@@ -68,8 +65,6 @@ elixir (mix)->
     ]
 
     mix.version [
-      'css/vendor.css'
-      'css/app.css'
-      'js/vendor.js'
-      'js/app.js'
+      'backend/css/vendor.css'
+      'backend/js/vendor.js'
     ]

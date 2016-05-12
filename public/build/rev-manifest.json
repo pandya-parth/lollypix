@@ -1,6 +1,4 @@
 {
-  "css/app.css": "css/app-aa3c9d985b.css",
-  "css/vendor.css": "css/vendor-f74c31be2c.css",
-  "js/app.js": "js/app-fdbc808ed5.js",
-  "js/vendor.js": "js/vendor-af1f9dbd44.js"
+  "backend/css/vendor.css": "backend/css/vendor-f74c31be2c.css",
+  "backend/js/vendor.js": "backend/js/vendor-af1f9dbd44.js"
 }
