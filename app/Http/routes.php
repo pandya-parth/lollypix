@@ -26,6 +26,8 @@ Route::group(['middleware' => ['auth', 'auth.admin'],'prefix'=>'admin','namespac
 	/* Route for Change Password for admin */
 	Route::post('changePassword',['as'=>'changePassword','uses'=> 'UserController@updatePassword']);
     Route::get('changePassword', ['as'=>'changePassword','uses'=> 'UserController@changePassword']);
+    /* Route for Logout */
+    Route::get('logout',['as'=>'logout', 'uses'=>'UserController@getLogout']);
     
     /* Route for  web site  setting */
    	Route::controller('settings', 'SettingsController');
@@ -34,6 +36,7 @@ Route::group(['middleware' => ['auth', 'auth.admin'],'prefix'=>'admin','namespac
     Route::resource('users','UserController');
     /* Route for Admin Tags Management */
     Route::resource('tags','TagsController');
+
 });
 /* Admin routes ends here. */
 	

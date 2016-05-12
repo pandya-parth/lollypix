@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Redirect;
 
 
 class AdminOnly
@@ -20,5 +21,6 @@ class AdminOnly
         {
             return $next($request);
         }
+        
     }
 }

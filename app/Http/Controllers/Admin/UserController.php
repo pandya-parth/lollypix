@@ -19,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $users=User::where("role","<>","admin")->get(); // fetch users records only (not admin)
-        return view('admin/users/index',compact('users'));// to view users page
+        return view('admin.users.index',compact('users'));// to view users page
     }
 
 
@@ -89,8 +89,6 @@ class UserController extends Controller
     {
         //
     }
-
-
     //to view change password form
     public function changePassword()
     {
@@ -101,9 +99,9 @@ class UserController extends Controller
     {
       //set validation for each request
         $this->validate($request, [
-                'oldpassword'=>'required',
-                'newpassword'=>'required|min:3|different:oldpassword|same:password_confirmation',
-                'password_confirmation' => 'required|min:3'
+            'oldpassword'=>'required',
+            'newpassword'=>'required|min:3|different:oldpassword|same:password_confirmation',
+            'password_confirmation' => 'required|min:3'
         ],[
             //  set custom message for validation rule if not set it will display default error message
             'oldpassword.required'=>'This field is required',
@@ -119,13 +117,16 @@ class UserController extends Controller
 
       if(Auth::validate($credentials))//check credentials if validate
          {
-         
             $user->password = bcrypt($request->get('newpassword'));
             $user->save(); // update in database 
             return redirect('admin'); //redirect to admin dashboard after changing password
          }
          return redirect()->back()->with('error_msg','Invalid Current Password'); // redirect back if credential not match 
     }
-
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect('admin');
+    }
 
 }

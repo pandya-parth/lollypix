@@ -151,6 +151,7 @@ return [
         Former\FormerServiceProvider::class,
         //this is used for Image resizing
         Intervention\Image\ImageServiceProvider::class,
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 
         /*
          * Application Service Providers...
