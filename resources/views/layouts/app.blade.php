@@ -15,7 +15,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta content="" name="description" />
     <meta content="" name="author" />
-    <link rel="stylesheet" href="{{ elixir('css/vendor.css') }}">
+    <link rel="stylesheet" href="{{ elixir('admin/css/vendor.css') }}">
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
     <!--[if lte IE 9]>
         <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
@@ -53,7 +53,7 @@
     
    
     <!-- BEGIN VENDOR JS -->
-    <script src="{{ elixir('js/vendor.js') }}"></script>
+    <script src="{{ elixir('admin/js/vendor.js') }}"></script>
     <script src="{{ elixir('js/app.js') }}"></script>
 
     <!-- END PAGE LEVEL JS -->

@@ -1,6 +1,5 @@
 elixir = require 'laravel-elixir'
 
-
 bowerPath = (parts...)-> ['.','bower_components'].concat(parts).join('/')
 
 elixir (mix)->
@@ -19,7 +18,7 @@ elixir (mix)->
       'pages.css'
       'windows.chrome.fix.css'
        'style.css'
-    ], 'public/css/vendor.css'
+    ], 'public/admin/css/vendor.css'
 
 
 
@@ -49,13 +48,13 @@ elixir (mix)->
       'datatables.js'
       'plupload.full.min.js'
       'scripts.js'
-    ], 'public/js/vendor.js'
+    ], 'public/admin/js/vendor.js'
 
     
 
     mix.version [
-      'css/vendor.css'
+      'admin/css/vendor.css'
       'css/app.css'
-      'js/vendor.js'
+      'admin/js/vendor.js'
       'js/app.js'
     ]

@@ -2794,7 +2794,7 @@ var uploader = new plupload.Uploader({
         },
         
         UploadComplete: function(up,file){
-          $('#preview').html('<img src=/tmp/' + file.name + '  style="width:200px;height:200px;">');
+          $('#preview').html('<img src=/tmp/' + file.name + '  style="width:60px;height:60px;">');
         },
 
  

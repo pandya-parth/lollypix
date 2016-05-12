@@ -61,7 +61,7 @@
 
     });
 
-        // Pl upload
+        // START Pl upload for Tag and Catageries management
       // Custom example logic
  
 var uploader = new plupload.Uploader({
@@ -69,6 +69,7 @@ var uploader = new plupload.Uploader({
      
     browse_button : 'pickfiles', // you can pass in id...
     container: document.getElementById('container'), // ... or DOM Element itself
+    multi_selection:false,
      
     url : "/plupload/upload.php",
      
@@ -99,12 +100,16 @@ var uploader = new plupload.Uploader({
             plupload.each(files, function(file) {
                 document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
                 $('#photo').val(file.name);
-                $('#preview').html('<img src=/tmp/' + file.name + '  style="width:60px;height:60px;">');
+              
             });
         },
  
         UploadProgress: function(up, file) {
             document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+        },
+        
+        UploadComplete: function(up,file){
+          $('#preview').html('<img src=/tmp/' + file.name + '  style="width:200px;height:200px;">');
         },
 
  
@@ -119,21 +124,7 @@ var uploader = new plupload.Uploader({
 
  
 uploader.init();
-
-
-//Tag Delete
-function deleteTag(id) {
-    if (confirm('Delete this  Tag?')) {
-        $.ajax({
-            type: "DELETE",
-            url: 'admin/tags/' + id, //resource
-            success: function(affectedRows) {
-                //if something was deleted, we redirect the Tag to the Tags page, and automatically the user that he deleted will disappear
-                if (affectedRows > 0) window.location = 'admin/tags';
-            }
-        });
-    }
-}
+// END Pl upload for Tag and Catageries management
 
     $('#website').click(function(e){
           var url = $('#website').val();

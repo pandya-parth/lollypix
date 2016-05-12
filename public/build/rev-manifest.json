@@ -1,6 +1,6 @@
 {
+  "admin/css/vendor.css": "admin/css/vendor-4065ec4395.css",
+  "admin/js/vendor.js": "admin/js/vendor-82987bdfc5.js",
   "css/app.css": "css/app-aa3c9d985b.css",
-  "css/vendor.css": "css/vendor-4065ec4395.css",
-  "js/app.js": "js/app-fdbc808ed5.js",
-  "js/vendor.js": "js/vendor-43b9e59862.js"
+  "js/app.js": "js/app-fdbc808ed5.js"
 }

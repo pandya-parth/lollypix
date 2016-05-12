@@ -20,7 +20,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-       $tags=Tag::all();//list all records
+       $tags=Tag::all();/* list all records */
        return view('admin.tags.index',compact('tags')); /* redirect to index page with records */
     }
 
@@ -31,7 +31,7 @@ class TagsController extends Controller
      */
     public function create()
     {
-        return view('admin.tags.form'); /* this is for open to new tag form*/
+        return view('admin.tags.form'); /* this is for open to new tag form */
     }
 
     /**
@@ -80,6 +80,7 @@ class TagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+   
     public function edit($id)
     {
         /* this is used for update data  this will open update form with data*/
@@ -95,9 +96,10 @@ class TagsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+   
     public function update(Request $request, $id)
     {
-         /*check validation */
+         /* check validation */
          $rules = ['name' => 'required' , 'photo' => 'required' ];
         $messages = [
             'name.required' => 'This field is require',
@@ -106,13 +108,13 @@ class TagsController extends Controller
 
         $validator = Validator::make($request->all(),$rules,$messages);
 
-        if ($validator->fails()) {{ /* validation fail then redirect back*/
+        if ($validator->fails()) { /* validation fail then redirect back*/
              Former::withErrors($validator);
             return redirect('admin/tags/edit')->withErrors($validator)->withInput();
         } 
          /*if validation success then update data to the database using below code and redirect to tag index page*/
          $tag = tag::find($id);
-         $tag->fill( $request->all() );   
+         $tag->fill($request->all());   
          
          $tag->save();
          return Redirect::route('admin.tags.index');
@@ -123,13 +125,14 @@ class TagsController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     **/
     public function destroy($id)
     {
-        /*delete record */
+        /* delete record */
         $tag = Tag::find($id);
         $tag->delete();
-        return Redirect::route('admin.tags.index');/*after delete redirect to index page */
+        /* after delete redirect to index page */
+        return Redirect::route('admin.tags.index');
     }
    
 }

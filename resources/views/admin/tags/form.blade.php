@@ -22,7 +22,7 @@
 			    		{{ session('error_msg') }}
 			        </div>
 		        @endif
-	       	  {!! Former::open()->action(isset($tag->id)? URL::route("admin.tags.update",array($tag->id),array('files' => true)) : URL::route("admin.tags.store") )->method(isset($tag->id)? 'put':'post')->enctype("multipart/form-data")->class('p-t-15')->role('form') !!}
+	       	  {!! Former::open()->action(isset($tag->id)? URL::route("admin.tags.update",array($tag->id),array('files' => true)) : URL::route("admin.tags.store") )->method(isset($tag->id)? 'put':'post')->enctype("multipart/form-data")->class('p-t-15')->role('form')->id('form') !!}
 	         
 	            <div class="row">
 	                <div class="col-sm-6">
@@ -38,7 +38,7 @@
 	                    {!!  Former::label('Photo')!!}
 	                    <div id="filelist" >Upload photos from here..</div>
 	                        <div id="container">
-	                        <a id="pickfiles" href="javascript:;">[Select files]</a>
+	                        <a id="pickfiles" href="javascript:;" class="btn btn-success btn-cons m-b-10"><i class="fa fa-cloud-upload">Upload</i></a>
 	                    	</div>
 	                    	<td></td>
 	                    	<div id="preview"></div>
